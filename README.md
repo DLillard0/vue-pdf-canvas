@@ -2,6 +2,8 @@
 
 一个基于 pdf.js 的 PDF 渲染 Vue 组件（[github](https://github.com/DLillard0/vue-pdf-canvas)）
 
+## [在线文档](https://dlillard0.github.io/vue-pdf-canvas/)
+
 ## 使用方式
 
 ### 1. 将 pdf.js 作为 cdn 引入
@@ -11,7 +13,6 @@ import PdfCanvas from 'vue-pdf-canvas'
 Vue.use(PdfCanvas)
 ```
 
-:::tip
 ### 注意：
 1. 该组件依赖于 pdf.js@2.3x 版本。
 2. 该组件默认导出的包不包含 pdf.js，需要全局引入 pdf.js@2.3x 的包，确保 window 下有 pdfjsLib 和 pdfjsWorker 这两个变量。
@@ -26,7 +27,6 @@ Vue.use(PdfCanvas)
     'pdfjsWorker': 'pdfjsWorker'
   }
   ```
-:::
 
 ### 2. 全量引入，会默认包含 pdf.js 包
 
@@ -38,8 +38,6 @@ Vue.use(PdfCanvas)
 ```
 
 ## 基础用法
-
-:::demo
 
 ```html
 <el-button @click='prevPage'>上一页</el-button>
@@ -103,8 +101,6 @@ Vue.use(PdfCanvas)
   }
 </script>
 ```
-
-:::
 
 ## API
 

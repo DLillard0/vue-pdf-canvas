@@ -21,8 +21,7 @@
     "build:pdfjslib": "vue-cli-service build --target lib --name PdfCanvas --filename index --dest lib/pdfjs ./src/components/index.js",
     "lint": "vue-cli-service lint",
     "screenshot": "screenshot -l",
-    "clean": "rm -rf build && rm -rf lib && rm -rf screenshot.png",
-    "prepublishOnly": "npm run build && npm run build:lib && npm run screenshot"
+    "clean": "rm -rf build && rm -rf lib"
   },
   "dependencies": {
     "pdfjs-dist": "~2.3.200"
