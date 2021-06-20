@@ -1,0 +1,38 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+
+  &.is-component {
+    overflow: hidden;
+  }
+}
+
+.demo-content {
+  padding-bottom: 50px;
+}
+
+.tip {
+  padding: 8px 16px;
+  background-color: #ECF8FF;
+  border-radius: 4px;
+  border-left: #50bfff 5px solid;
+  margin: 20px 0;
+
+  ol>li + li {
+    margin-top: 10px;
+  }
+
+  code {
+    background-color: rgba(255, 255, 255, .7);
+    color: #445368;
+  }
+
+  pre {
+    padding-left: 40px;
+  }
+}
