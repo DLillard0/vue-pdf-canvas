@@ -54,13 +54,14 @@ Vue.use(PdfCanvas)
   <el-table-column prop="rotation" label="旋转角度"></el-table-column>
   <el-table-column prop="scale" label="清晰度"></el-table-column>
 </el-table>
-<div style="width:600px">
+<div style="width:600px" v-loading="loading">
   <pdf-canvas
     :src="src"
     :scale="scale"
     :page="page"
     :rotation="rotation"
     :renderNum="renderNum"
+    @pdf-load="handleLoad"
   ></pdf-canvas>
 </div>
 
@@ -72,7 +73,8 @@ Vue.use(PdfCanvas)
         rotation: 0,
         page: 1,
         scale: 1.5,
-        renderNum: 1
+        renderNum: 1,
+        loading: true
       }
     },
     computed: {
@@ -98,6 +100,9 @@ Vue.use(PdfCanvas)
       },
       add() {
         this.renderNum += 1
+      },
+      handleLoad() {
+        this.loading = false
       }
     }
   }
